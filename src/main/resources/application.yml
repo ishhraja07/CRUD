@@ -1,0 +1,66 @@
+#server:
+#  port: '8082'
+#
+#spring:
+#  profiles:
+#    active: qa
+#
+#---
+#
+#spring:
+#  config:
+#    activate:
+#      on-profile: dev
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    url: jdbc:mysql://localhost:3306/dcbapp
+#    password: 6392@VerRa@#!
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sqL: 'true'
+#welcome:
+#  message: My name is Rahul Verma!!
+#
+#---
+#
+#spring:
+#  config:
+#    activate:
+#      on-profile: qa
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    url: jdbc:mysql://localhost:3306/dcbapp-qa
+#    password: 6392@VerRa@#!
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sqL: 'true'
+#welcome:
+#  message: My name is Rahul Verma!!
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#        exclude: "env,loggers"
+#---
+#
+#spring:
+#  config:
+#    activate:
+#      on-profile: prod
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    url: jdbc:mysql://localhost:3306/dcbapp-prod
+#    password: 6392@VerRa@#!
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sqL: 'true'
+#welcome:
+#  message: My name is Rahul Verma!!
