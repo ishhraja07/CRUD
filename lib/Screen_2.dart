@@ -15,9 +15,11 @@ class _Screen_2State extends State<Screen_2> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('API Fetch Example'),
+          backgroundColor: Colors.blue,
         ),
         body: FutureBuilder(
           future: apiService.getData(),
@@ -32,9 +34,40 @@ class _Screen_2State extends State<Screen_2> {
               return ListView.builder(
                 itemCount: todos?.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(todos?[index]['title']),
-                    // You can customize the ListTile as needed
+                  return Column(
+                    children: [
+                      SizedBox(height: 30,),
+                      Container(
+
+
+                        color: Colors.redAccent,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text("DepartmentName : ${todos?[index]['departmentName']}",style: TextStyle(fontSize: 15),),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("DepartmentId : ${todos?[index]['departmentId']}",style: TextStyle(fontSize: 15),),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("DepartmentAddress : ${todos?[index]['departmentAddress']}",style: TextStyle(fontSize: 15),),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("DepartmentCode : ${todos?[index]['departmentCode']}",style: TextStyle(fontSize: 15),),
+                              ],
+                            ),
+                            SizedBox(height: 10,),
+                          ],
+                        ),
+                      )
+                    ],
                   );
                 },
               );
