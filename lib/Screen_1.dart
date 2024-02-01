@@ -37,10 +37,9 @@ class _Screen1State extends State<Screen1> {
           'Content-Type': 'application/json', // Set the correct content type
         },
         body: jsonEncode({
-          "departmentName": "$departmentName",
-          "departmentId": "$departmentId",
-          "departmentCode": "$departmentCode",
-          "departmentAddress": "$departmentAddress"
+          "departmentName":"$departmentName",
+          "departmentAddress":"$departmentAddress",
+          "departmentCode":"$departmentCode"
         }),
       );
 
@@ -85,19 +84,19 @@ class _Screen1State extends State<Screen1> {
                 },
               ),
               SizedBox(height: 10,),
-              TextFormField(
-                controller: _t2,
-                decoration: InputDecoration(
-                  labelText: 'Department Id',
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Department Id cannot be empty';
-                  }
-                  return null;
-                },
-              ),
-              SizedBox(height: 10,),
+              // TextFormField(
+              //   controller: _t2,
+              //   decoration: InputDecoration(
+              //     labelText: 'Department Id',
+              //   ),
+              //   validator: (value) {
+              //     if (value == null || value.isEmpty) {
+              //       return 'Department Id cannot be empty';
+              //     }
+              //     return null;
+              //   },
+              // ),
+              // SizedBox(height: 10,),
               TextFormField(
                 controller: _t3,
                 decoration: InputDecoration(

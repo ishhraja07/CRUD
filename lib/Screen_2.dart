@@ -45,14 +45,15 @@ class _Screen_2State extends State<Screen_2> {
                           children: [
                             Row(
                               children: [
-                                Text("DepartmentName : ${todos?[index]['departmentName']}",style: TextStyle(fontSize: 15),),
+                                Text("DepartmentId : ${todos?[index]['departmentId']}",style: TextStyle(fontSize: 15),),
                               ],
                             ),
                             Row(
                               children: [
-                                Text("DepartmentId : ${todos?[index]['departmentId']}",style: TextStyle(fontSize: 15),),
+                                Text("DepartmentName : ${todos?[index]['departmentName']}",style: TextStyle(fontSize: 15),),
                               ],
                             ),
+
                             Row(
                               children: [
                                 Text("DepartmentAddress : ${todos?[index]['departmentAddress']}",style: TextStyle(fontSize: 15),),
